@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ОСББ "Тьотя Тома"</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">ОСББ "Тьотя Тома"</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="../website/index.html">Показники</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">ОСББ "Тьотя Тома"</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Мабуть найкраще ОСББ у світі</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Вода</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Детальніше</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Електроенергія</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Детальніше</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Опалення</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Детальніше</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">CO2</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Детальніше</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Якийсь графік 1
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Якийсь графік 2
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Якась тавличка 1
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>String</th>
+                                            <th>String</th>
+                                            <th>String</th>
+                                            <th>Integer</th>
+                                            <th>Datetime</th>
+                                            <th>Float</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>66</td>
+                                            <td>2009/01/12</td>
+                                            <td>86,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>22</td>
+                                            <td>2012/03/29</td>
+                                            <td>433,060</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>33</td>
+                                            <td>2008/11/28</td>
+                                            <td>162,700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>61</td>
+                                            <td>2012/12/02</td>
+                                            <td>372,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>59</td>
+                                            <td>2012/08/06</td>
+                                            <td>137,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>55</td>
+                                            <td>2010/10/14</td>
+                                            <td>327,900</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>39</td>
+                                            <td>2009/09/15</td>
+                                            <td>205,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>23</td>
+                                            <td>2008/12/13</td>
+                                            <td>103,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>30</td>
+                                            <td>2008/12/19</td>
+                                            <td>90,560</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>22</td>
+                                            <td>2013/03/03</td>
+                                            <td>342,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>36</td>
+                                            <td>2008/10/16</td>
+                                            <td>470,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>43</td>
+                                            <td>2012/12/18</td>
+                                            <td>313,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>19</td>
+                                            <td>2010/03/17</td>
+                                            <td>385,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>66</td>
+                                            <td>2012/11/27</td>
+                                            <td>198,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>64</td>
+                                            <td>2010/06/09</td>
+                                            <td>725,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>59</td>
+                                            <td>2009/04/10</td>
+                                            <td>237,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>41</td>
+                                            <td>2012/10/13</td>
+                                            <td>132,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>35</td>
+                                            <td>2012/09/26</td>
+                                            <td>217,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>30</td>
+                                            <td>2011/09/03</td>
+                                            <td>345,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>40</td>
+                                            <td>2009/06/25</td>
+                                            <td>675,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>21</td>
+                                            <td>2011/12/12</td>
+                                            <td>106,450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>23</td>
+                                            <td>2010/09/20</td>
+                                            <td>85,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>47</td>
+                                            <td>2009/10/09</td>
+                                            <td>1,200,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>42</td>
+                                            <td>2010/12/22</td>
+                                            <td>92,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>28</td>
+                                            <td>2010/11/14</td>
+                                            <td>357,650</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>28</td>
+                                            <td>2011/06/07</td>
+                                            <td>206,850</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>48</td>
+                                            <td>2010/03/11</td>
+                                            <td>850,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>20</td>
+                                            <td>2011/08/14</td>
+                                            <td>163,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>37</td>
+                                            <td>2011/06/02</td>
+                                            <td>95,400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>53</td>
+                                            <td>2009/10/22</td>
+                                            <td>114,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>27</td>
+                                            <td>2011/05/07</td>
+                                            <td>145,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>22</td>
+                                            <td>2008/10/26</td>
+                                            <td>235,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>46</td>
+                                            <td>2011/03/09</td>
+                                            <td>324,050</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>47</td>
+                                            <td>2009/12/09</td>
+                                            <td>85,675</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>51</td>
+                                            <td>2008/12/16</td>
+                                            <td>164,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>41</td>
+                                            <td>2010/02/12</td>
+                                            <td>109,850</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>62</td>
+                                            <td>2009/02/14</td>
+                                            <td>452,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>37</td>
+                                            <td>2008/12/11</td>
+                                            <td>136,200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>65</td>
+                                            <td>2008/09/26</td>
+                                            <td>645,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>64</td>
+                                            <td>2011/02/03</td>
+                                            <td>234,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>38</td>
+                                            <td>2011/05/03</td>
+                                            <td>163,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>37</td>
+                                            <td>2009/08/19</td>
+                                            <td>139,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>61</td>
+                                            <td>2013/08/11</td>
+                                            <td>98,540</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>47</td>
+                                            <td>2009/07/07</td>
+                                            <td>87,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>64</td>
+                                            <td>2012/04/09</td>
+                                            <td>138,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>63</td>
+                                            <td>2010/01/04</td>
+                                            <td>125,250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>56</td>
+                                            <td>2012/06/01</td>
+                                            <td>115,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>43</td>
+                                            <td>2013/02/01</td>
+                                            <td>75,650</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>46</td>
+                                            <td>2011/12/06</td>
+                                            <td>145,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>47</td>
+                                            <td>2011/03/21</td>
+                                            <td>356,250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>21</td>
+                                            <td>2009/02/27</td>
+                                            <td>103,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>30</td>
+                                            <td>2010/07/14</td>
+                                            <td>86,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>51</td>
+                                            <td>2008/11/13</td>
+                                            <td>183,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>29</td>
+                                            <td>2011/06/27</td>
+                                            <td>183,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>Текст</td>
+                                            <td>27</td>
+                                            <td>2011/01/25</td>
+                                            <td>112,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <!-- <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
